@@ -1,9 +1,10 @@
 import React from "react";
 import hsbcLogo from "../../assests/hsbc-logo.svg";
+import { BsQuestionCircle } from "react-icons/bs";
 
 const Navbar = () => {
   return (
-    <div className="flex justify-between items-center bg-gray-200 px-8 py-4 shadow-md">
+    <div className="flex justify-between items-center bg-gray-400 px-8 py-4 shadow-md">
       {/* Left Section */}
       <div className="flex items-center gap-6">
         <img src={hsbcLogo} alt="hsbcLogo" className="w-32 cursor-pointer" />
@@ -12,7 +13,7 @@ const Navbar = () => {
 
       {/* Right Section */}
       <div className="flex items-center gap-6">
-        <p className="text-xl cursor-pointer">❓</p>
+        <p className="text-xl cursor-pointer"><BsQuestionCircle /></p>
         <p className="cursor-pointer">English</p>
         <select
           name="userNames"
