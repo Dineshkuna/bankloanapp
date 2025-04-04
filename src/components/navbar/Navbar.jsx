@@ -3,34 +3,30 @@ import hsbcLogo from "../../assests/hsbc-logo.svg";
 
 const Navbar = () => {
   return (
-    <div className="inline-flex align-around gap-20 bg-gray-400 pb-5 pl-20 pr-20 ">
-      <>
-        <div>
-          <img src={hsbcLogo} alt="hsbcLogo" className="w-40 pointer" />
-        </div>
-        <div className="mr-90">
-          <p className="cursor-pointer"> | Digital Credit Portal</p>
-        </div>
-      </>
+    <div className="flex justify-between items-center bg-gray-200 px-8 py-4 shadow-md">
+      {/* Left Section */}
+      <div className="flex items-center gap-6">
+        <img src={hsbcLogo} alt="hsbcLogo" className="w-32 cursor-pointer" />
+        <p className="text-lg font-semibold text-gray-700">| Digital Credit Portal</p>
+      </div>
 
-      <>
-        <div>
-          <p>❓</p>
-        </div>
-        <div>
-          <p>English</p>
-        </div>
-        <div>
-          <select name="userNames" id="userNames">
-            <option value="UserName">Users</option>
-            <option value="userName1">userName1</option>
-            <option value="userName2">userName2</option>
-          </select>
-        </div>
-        <div>
-          <button>Login | Register</button>
-        </div> 
-      </>
+      {/* Right Section */}
+      <div className="flex items-center gap-6">
+        <p className="text-xl cursor-pointer">❓</p>
+        <p className="cursor-pointer">English</p>
+        <select
+          name="userNames"
+          id="userNames"
+          className=" px-2 py-1 text-sm"
+        >
+          <option value="UserName">Users</option>
+          <option value="userName1">userName1</option>
+          <option value="userName2">userName2</option>
+        </select>
+        <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm">
+          Login | Register
+        </button>
+      </div>
     </div>
   );
 };
